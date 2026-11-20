@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doña Tanchita — Mole Costeño en Pasta | Costa Chica de Guerrero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-badge">COSTA CHICA · GUERRERO</span>
+        <span class="brand-name">Doña Tanchita</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#producto">Presentaciones</a>
+        <a href="#origen">Origen y Receta</a>
+        <a href="#preparacion">Preparación</a>
+        <a href="#exportacion">Calidad Global</a>
+      </nav>
+      <button class="cart-trigger" id="cartTrigger" aria-label="Abrir carrito">
+        <span>Carrito</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">TRADICIÓN DE LA COSTA CHICA · SIN PROTEÍNA ANIMAL · SIN GLUTEN</p>
+        <h1>Mole Costeño en Pasta <em>Doña Tanchita</em></h1>
+        <p class="hero-sub">
+          El sabor auténtico del chile costeño rojo, ajonjolí tostado y especias de Guerrero.
+          Envasado en <strong>pouch multicapa de alta barrera</strong> (300 g y 1 kg) listo para viajar a cualquier mesa del mundo sin refrigeración.
+        </p>
+        <div class="hero-actions">
+          <a href="#producto" class="btn-primary">Elegir Presentación</a>
+          <a href="#preparacion" class="btn-ghost">Cómo se prepara</a>
+        </div>
+        <div class="hero-metrics">
+          <div>
+            <strong>12–24 meses</strong>
+            <span>Vida de anaquel</span>
+          </div>
+          <div>
+            <strong>300 g / 1 kg</strong>
+            <span>Pouch alta barrera</span>
+          </div>
+          <div>
+            <strong>100% Vegetal</strong>
+            <span>Base pura en pasta</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Product Card -->
+      <div class="hero-card tile" id="producto">
+        <div class="card-header">
+          <span class="pill-tag">ETAPA 1 · LANZAMIENTO</span>
+          <span class="stock-tag">Disponible para envío</span>
+        </div>
+        <h2>Selecciona tu presentación</h2>
+        <p class="card-desc">Pasta concentrada lista para diluir en caldo o agua caliente.</p>
+
+        <div class="size-selector" role="radiogroup" aria-label="Presentación">
+          <button type="button" class="size-btn active" data-sku="MOLE-300G" data-size="300 g" data-price="145" data-yield="4 a 6 porciones (dependiendo del gusto)" data-desc="Ideal para el hogar. Bolsa stand-up pouch con corte fácil.">
+            <span class="size-weight">300 g</span>
+            <span class="size-label">Pouch Hogar</span>
+            <span class="size-price">$145 MXN</span>
+          </button>
+          <button type="button" class="size-btn" data-sku="MOLE-1KG" data-size="1 kg" data-price="420" data-yield="15 a 20 porciones (dependiendo del gusto)" data-desc="Formato familiar o foodservice / restaurantes. Ahorro por kilo.">
+            <span class="size-weight">1 kg</span>
+            <span class="size-label">Pouch Pro / Familiar</span>
+            <span class="size-price">$420 MXN</span>
+          </button>
+        </div>
+
+        <div class="selected-details">
+          <div class="detail-row">
+            <span>Presentación seleccionada:</span>
+            <strong id="selectedTitle">Pouch 300 g (Hogar)</strong>
+          </div>
+          <div class="detail-row">
+            <span>Rendimiento estimado:</span>
+            <strong id="selectedYield">4 a 6 porciones (dependiendo del gusto)</strong>
+          </div>
+          <p class="selected-note" id="selectedDesc">Ideal para el hogar. Bolsa stand-up pouch con corte fácil.</p>
+        </div>
+
+        <div class="buy-row">
+          <div class="qty-control">
+            <button type="button" id="qtyMinus" aria-label="Disminuir cantidad">−</button>
+            <span id="qtyValue">1</span>
+            <button type="button" id="qtyPlus" aria-label="Aumentar cantidad">+</button>
+          </div>
+          <button type="button" class="btn-primary btn-add" id="addToCartBtn">
+            Agregar · <span id="btnTotal">$145 MXN</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Origen y Perfil Sensorial -->
+  <section id="origen" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">IDENTIDAD REGIONAL</p>
+        <h2>¿Qué hace único al Mole Costeño?</h2>
+      </div>
+      <div class="tiles-grid">
+        <article class="tile feature-tile">
+          <span class="tile-num">01</span>
+          <h3>Chile Costeño Rojo</h3>
+          <p>A diferencia del mole poblano dulce, el costeño es vibrante, rojo brillante, picosito y sin chocolate dominante.</p>
+        </article>
+        <article class="tile feature-tile">
+          <span class="tile-num">02</span>
+          <h3>Tostado Artesanal</h3>
+          <p>Ajonjolí, cacahuate y almendra tostados lentamente, espesados naturalmente con tortilla de maíz (libre de gluten).</p>
+        </article>
+        <article class="tile feature-tile">
+          <span class="tile-num">03</span>
+          <h3>Sinergia Habanero</h3>
+          <p>Diseñado para complementar nuestra línea de salsas de habanero bajo los mismos estándares de exportación.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preparación -->
+  <section id="preparacion" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">DE LA COSTA A TU MESA EN 10 MINUTOS</p>
+        <h2>Modo de Preparación</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="tile step-tile">
+          <span class="step-badge">PASO 1</span>
+          <h3>Calienta</h3>
+          <p>Vierte la pasta del pouch en una cazuela a fuego medio con un poco de aceite o directamente.</p>
+        </div>
+        <div class="tile step-tile">
+          <span class="step-badge">PASO 2</span>
+          <h3>Diluye</h3>
+          <p>Agrega caldo de pollo, res o verduras (o agua caliente) poco a poco: ~2 tazas por cada 300 g de pasta.</p>
+        </div>
+        <div class="tile step-tile">
+          <span class="step-badge">PASO 3</span>
+          <h3>Sirve</h3>
+          <p>Deja hervir 5 minutos moviendo suavemente. Sirve sobre pollo, cerdo o vegetales con ajonjolí tostado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calidad y Exportación -->
+  <section id="exportacion" class="section">
+    <div class="container">
+      <div class="export-banner tile">
+        <div>
+          <p class="eyebrow">ESTÁNDAR GLOBAL · NOM-051 & FDA READY</p>
+          <h2>Empaque Pouch de Alta Barrera</h2>
+          <p>
+            Al ser una pasta base <strong>sin proteína animal</strong>, nuestro Mole Costeño evita restricciones cárnicas internacionales,
+            logrando una vida de anaquel de 12 a 24 meses a temperatura ambiente.
+          </p>
+        </div>
+        <div class="allergen-box">
+          <strong>Declaración de Alérgenos</strong>
+          <p>Contiene: Ajonjolí (sésamo), cacahuate y almendra. Libre de gluten y lácteos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Doña Tanchita · Costa Chica de Guerrero, México</span>
+      <span>Presentaciones: Pouch 300 g & Pouch 1 kg</span>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Tu Pedido</h3>
+      <button type="button" class="close-cart" id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0 MXN</strong>
+      </div>
+      <button type="button" class="btn-primary btn-checkout" id="checkoutBtn">Finalizar Pedido</button>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
